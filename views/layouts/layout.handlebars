@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Sheet Music International</title>
-	<link rel="stylesheet" href="/css/bootstrap.css" />
-	<link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-	<div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/">Home</a></li>
-            {{#if user}}
-              <li role="presentation"><a href="/dashboard">Dashboard</a></li>
-              <li role="presentation"><a href="/upload">Upload</a></li>
-              <li role="presentation"><a href="/users/logout">Logout</a></li>
-            {{else}}
-              <li role="presentation"><a href="/users/login">Login</a></li>
-              <li role="presentation"><a href="/users/register">Register</a></li>
-            {{/if}}
-          </ul>
-        </nav>
-        <h3 class="text-muted">Sheet Music International</h3>
-      </div>
+  <head>
+    <meta charset="utf-8">
+    <title>Sheet Music International</title>
+    <meta name="description" content="Bootstrap 4 migration guide, themes and example snippets. Find themes, code examples for Bootstrap 4,and how to customize Bootstrap 4 with SASS." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
 
-
-      <div class="row">
-        <div class="col-lg-12">
-          {{#if success_msg}}
-            <div class="alert alert-success">{{success_msg}}</div>
-          {{/if}}
-
-          {{#if error_msg}}
-            <div class="alert alert-danger">{{error_msg}}</div>
-          {{/if}}
-
-          {{#if error}}
-            <div class="alert alert-danger">{{error}}</div>
-          {{/if}}
-          
-          {{{body}}}
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-faded">
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                ☰
+            </button>
+            <a class="navbar-brand page-scroll" href="/">Home</a>
+            <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+                <ul class="nav navbar-nav">
+                  {{#if user}}
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/upload">Upload</a>
+                    </li>
+                  {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/register">Register</a>
+                    </li>
+                  {{/if}}
+                </ul>
+                <ul class="nav navbar-nav pull-xs-right">
+                    {{#if user}}
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/logout">Logout</a>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="/users/login">Login</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        
-      </div>
+    {{{body}}}
 
-      <footer class="footer">
-        <p>&copy; 2016 Sheet Music International, Inc.</p>
-      </footer>
 
-    </div> <!-- /container -->
-</body>
+    <footer class="footer">
+      <p>&copy; 2016 Sheet Music International, Inc.</p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>

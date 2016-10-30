@@ -15,16 +15,6 @@ router.get('/login', function(req, res){
 	res.render('login');
 });
 
-// Home
-router.get('/', function(req, res){
-	res.render('index');
-});
-
-// Home
-router.get('/dashboard', function(req, res){
-	res.render('dashboard');
-});
-
 // Upload
 router.get('/upload', function(req, res){
 	res.render('upload');

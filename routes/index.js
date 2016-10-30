@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-// Get User Homepage
+// Get Dashboard
 router.get('/dashboard', ensureAuthenticated, function(req, res){
 	res.render('dashboard');
 });

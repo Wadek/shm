@@ -28,4 +28,7 @@ A web app where people can freely download, upload, and store sheet music.
 </ul>
 
 ### Project Details
-This project makes use of 
+This project makes use of:
+- http://bootstrap4.guide/
+- Node.js: https://nodejs.org/en/download/
+- https://www.mongodb.com/download-center, https://docs.mongodb.com/manual/administration/install-community/
