@@ -26,3 +26,6 @@ A web app where people can freely download, upload, and store sheet music.
 <li>Jezreel Garcia - jgarci72@asu.edu</li>
 <li>Sang Le - sble1@asu.edu</li>
 </ul>
+
+### Project Details
+This project makes use of 

@@ -25,6 +25,11 @@ router.get('/dashboard', function(req, res){
 	res.render('dashboard');
 });
 
+// Upload
+router.get('/upload', function(req, res){
+	res.render('upload');
+});
+
 // Register User
 router.post('/register', function(req, res){
 	var name = req.body.name;

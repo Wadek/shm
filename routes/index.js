@@ -6,6 +6,11 @@ router.get('/dashboard', ensureAuthenticated, function(req, res){
 	res.render('dashboard');
 });
 
+// Get Upload page
+router.get('/upload', ensureAuthenticated, function(req, res){
+	res.render('upload');
+});
+
 // Get Homepage
 router.get('/', function(req, res){
 	res.render('index');
@@ -16,7 +21,7 @@ function ensureAuthenticated(req, res, next){
 		return next();
 	} else {
 		req.flash('error_msg','You are not logged in');
-		res.redirect('index');
+		res.redirect('/users/login');
 	}
 }
 
