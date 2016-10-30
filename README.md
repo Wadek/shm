@@ -7,9 +7,9 @@ A web app where people can freely download, upload, and store sheet music.
 1. Download Node.js: https://nodejs.org/en/download/
 2. Download MongoDB: https://www.mongodb.com/download-center, https://docs.mongodb.com/manual/administration/install-community/
 3. Download/clone this repo
-4. run '''npm init'''
+4. run ```npm init```
 	- description: sheet music web app
-	- author: '''your name her'''
+	- author: ```your name here```
 	- enter yes on ok
 5. Open your terminal in the root directory of the web app and run ```npm install``` to install dependencies
 	- if you get the following error: "Error: Cannot find module 'some-module'" then do the following
